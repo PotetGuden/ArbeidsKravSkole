@@ -1,0 +1,137 @@
+
+body{
+    background-color: lavenderblush;
+    margin: 0;
+}
+
+/* Hoved div, setter position som relative så kan jeg putte masse andre elementer inn med absolute verdi, som da vil skalere med zoom funksjon og følge 
+alle kanter inne i div */
+#container{
+    margin: auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 600px;
+    border: 1px solid rgb(0,50,50);
+    background-color: rgb(90,180,90);
+    overflow: hidden;
+    position: relative;
+    
+}
+
+/* Bilde av Tom ned til høyre, som har en absolute verdi forhold til hoved div som er relative */
+#tom{
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    right: -100px;
+    bottom: 0px;
+}
+
+#bildeOverH1{
+    width:250px;
+    height:130px;
+    position: absolute;
+    top: -55px;
+    left: 250px;
+}
+
+h1{
+    text-align: center;
+    color: darkgreen;
+    text-shadow: 2px 2px 2px black;
+    font-size: 70px;
+}
+
+p{
+    margin:150px;
+}
+
+/* Bilde av jerry ned til venstre */
+#jerry1{
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    bottom:0px;
+}
+
+/* Dette startpunkt for bokstaven J og transition-values for animasjonen den skal utføre */
+#J{
+    position:absolute;
+    left:147px;
+    transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+}
+
+/* Dette startpunkt for bokstaven T og transition-values for animasjonen den skal utføre */
+#T{
+    position: absolute;
+    left:375px;
+    top: 47px;
+    transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+
+}
+
+/* Dette startpunkt for bokstaven ! og transition-values for animasjonen den skal utføre (kan ikke kalle en id/class som "!") 
+   denne vil også starte som usynlig */
+#sluttbokstav{
+    position:absolute;
+    left:830px;
+    top: 47px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s; 
+    opacity:0;
+}
+
+/* Animasjon for bokstav T, denne sier at når checkboxen i html er trykket(aka checked) så vil noe skje med #T*/
+#checkbox:checked ~ #T{
+    left: 143px;    
+}
+
+/* Animasjon for bokstav J, denne sier at når checkboxen i html er trykket(aka checked) så vil noe skje med #J */
+#checkbox:checked ~ #J{
+    left: 379px;    
+}
+
+/* Animasjon for bokstav !, denne sier at når checkboxen i html er trykket(aka checked) så vil noe skje med #! */
+#checkbox:checked ~ #sluttbokstav{
+    opacity:1;   
+}
+
+/* Her settes checkbox values og gjør den usynlig, og den er plassert over #bildeOverH1 */
+#checkbox{
+    width:200px;
+    height: 75px;
+    position:absolute;
+    left: 300px;
+    top: -10px;
+    opacity: 0;
+}
+
+/* css av tekst i midten */
+.middleText p{
+    position: absolute;
+    left: 50px;
+    border: 1px solid black;
+    border-radius:10px;
+    padding:10px;
+    color:ivory;
+    box-shadow: 4px 6px 21px 3px darkslateblue;
+    display: inline-block;
+    
+
+}
+
+/* fikser litt på audio controls utseende */
+#lyd{
+    position:absolute;
+    opacity:1;
+    width:100px;
+    opacity:0.5;
+}

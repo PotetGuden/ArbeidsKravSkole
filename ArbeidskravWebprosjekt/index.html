@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arbeidskrav</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    
+    <!-- Hoved container -->
+<div id="container">
+    <!-- Bilde av Tom og Jerry over h1 tag -->
+    <img src="images/TomOgJerry.png" id="bildeOverH1" alt="">
+
+    <!-- Nederste bilde av Tom, som også er clickable -->
+    <a href="mainpage.html"> 
+        <img id="tom" src="images/tom-og-jerry.png" alt="Tom"> 
+    </a> 
+    
+    <!-- Bilde av Jerry nederst til venstre-->
+    <img src="images/jerry1.png" id="jerry1" alt="Jerry"> 
+
+    
+
+    <!-- Audio sample -->
+    <audio controls id="lyd">
+        <source src="audio/scream.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+    <!-- Overskrift -->
+    <h1> 
+        <!-- Her har jeg lagd en "usynlig" checkbox under et bilde som gjør at når man trykker på den så vil noe skje med <span> taggene under -->
+        <input type="checkbox" id="checkbox">
+        <span id="J">J</span>
+        <span id="T">T</span>
+        <span id="sluttbokstav">!</span>
+        om og  &thinsp; errys nettside 
+    </h1>
+    
+    <!-- Tekst midt på siden  -->
+    <div class="middleText">
+        <p>
+            Click on the image of Tom and Jerry over the header to make the text correctly placed!<br><br>
+            Click on Tom in the bottom right corner to get to the next page!
+        </p>
+    </div>   
+</div>
+
+
+</body>
+</html>

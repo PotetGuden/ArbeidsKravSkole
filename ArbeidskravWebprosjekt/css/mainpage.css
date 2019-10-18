@@ -1,0 +1,115 @@
+body {
+    /* Setter bg color på nettsiden */
+    background-color: lavenderblush;
+    margin: 0;
+}
+
+#container {
+    /* Midtstiller containeren på siden, og setter position til relative for å kunne jobbe lettere med tagger inni containeren */
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    width: 1000px;
+    height: 650px;
+    border: 1px solid rgb(0, 50, 50);
+    background-color: rgb(90, 180, 90);
+    overflow: hidden;
+}
+
+.tekst {
+    /* Styler tekst og midtstiller den */
+    position: absolute;
+    left: 232px;
+    color: #fff;
+    margin: auto;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+#tekst-bold {
+    /* Styler teksten som skal være "fremhevet" */
+    position: absolute;
+    left: 139px;
+    font-weight: bolder;
+    color: firebrick;
+}
+
+#jerry {
+    /* Plassering av Jerry og legger til transition */
+    position: absolute;
+    width: 150px;
+    left: -20px;
+    top: 500px;
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.3s;
+}
+
+#tom {
+    /* Plassering av Tom, endrer scaleX-verdi og legger til transition */
+    position: absolute;
+    height: 150px;
+    bottom: 0px;
+    right: -230px;
+    transform: scaleX(-1);
+    transition-property: right;
+    transition-duration: 1.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in;
+
+
+}
+
+#tomjerry {
+    /* Opacity satt til 0, for å få ønsket effekt når "knapp" er hovret over */
+    position: relative;
+    left: 350px;
+    width: 300px;
+    bottom: -375px;
+    opacity: 0;
+}
+
+#btn {
+    position: absolute;
+    display: inline-block;
+    left: 397px;
+    bottom: 305px;
+    font-size: 14px;
+    line-height: 200%;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    padding: 10px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color ease 1s;
+
+}
+
+#btn:hover ~ #tomjerry {
+    /* Trenger tilde siden det er ett sibling-element */
+    opacity: 1;
+    transform: rotate(360deg);
+    transition-duration: 2s;
+    transition-delay: 0s;
+}
+
+#btn:hover { /* Endrer farge på "knappen" når den blir hovret over */
+    color: #FFF;
+    background-color: rgba(250, 250, 250, 0.3);
+}
+
+#container:hover #jerry {
+    top: -150px;
+
+}
+
+#container:hover #tom {
+    right: 1000px;
+}
+
+#container:hover #btn {
+    opacity: 1;
+}
