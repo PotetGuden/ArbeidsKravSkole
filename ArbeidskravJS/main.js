@@ -2,6 +2,7 @@
     Comments av all koding;
 
         OBS: Last ned og les README filen i denne mappen for å kunne se hva oppgaven går ut på.
+        -- : Liker ikke å ha alle komments øverst på denne måten, men det var det læreren sa vi måtte..
 
         Først lage variabler man kommer til å trenge senere og kan kalle inn når man vil(hente inn id/classes fra html dokument og variabler man kan bruke 
         som templateliteral senere.)
